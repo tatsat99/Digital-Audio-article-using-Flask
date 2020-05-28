@@ -1,0 +1,19 @@
+<!doctype html>
+    <body> 
+	<div>
+		<table>
+		<tr>
+			<th> Author's name </th>
+			<th> Article Published </th>
+		</tr>
+		{%for i in info%}
+		<tr>
+			<td> {{ i.author }} </td>
+			<td> {{ i.doc }} </td>
+		{%endfor%}
+		</tr>
+		
+		</table>
+	</div>
+	</body>
+</html>
