@@ -1,0 +1,33 @@
+<!doctype html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="background:url('/static/images/homepage4.jpg') no-repeat center fixed; background-size:100%;">
+<div style="background-color:#e60000;color:#ffffff;height:100px"></br><h1 class="display-5"><p class="text-center">Times of India Text to Speech</p></h1></div>
+<div  class="container-fluid" style="height:75px">
+</div>
+</br>
+<div class="container-fluid">
+<div class="row">
+<div class="col">
+	</div>
+	<div class ="col-7">
+		<div class="card">
+			<div class="card-body" style="background-color:#e60000;color:#ffffff; ">
+			<h5> Generated Audio </h5>
+			</div>
+			<div class="card-body">
+					<label><b>QR Code :</b></label>
+					<img src="{{ url_for('static', filename='{result}') }}" />
+					<br><br>
+                    <p> <a href = "/convert/{username}"> Click here to convert again </a> </p>
+                	</div>
+		        </div>
+		</div>
+		<div class="col">
+		</div>
+</div>
+</div>
+</body>
+</html>
