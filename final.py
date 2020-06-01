@@ -21,14 +21,14 @@ from PIL import Image
 from pydrive.drive import GoogleDrive
 
 drive = GoogleDrive(gauth)
-folder_id = '1ho-PTv9lVnyj0LvPKn_LzTLqtTIeoY9D'
+folder_id = 'your-drive-folder-id'
 import string
 import re
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
 app.config['SECRET_KEY'] = 'Thisissupposedtobesecret!'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://pma:@localhost/test'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'database-config' #username and password
 bootstrap = Bootstrap(app)
 db = SQLAlchemy(app)
 login_manager = LoginManager()
@@ -240,7 +240,7 @@ def do_conversion(n1,username):
     
     fileName = n2 + ".png"
     url.png(fileName, scale=8)
-    shutil.move(fileName, r'C:\Users\Tatsat\myproject\finish\static\images')
+    shutil.move(fileName, r'\static\images')
 
     u = Article(author=username, doc=n2)
     db.session.add(u)
